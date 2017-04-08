@@ -15,7 +15,7 @@ def getQQMusicList(url):
     '''
     html = requests.get(url)
     # print(html.text)
-    soup = BeautifulSoup(html.text, "html5")
+    soup = BeautifulSoup(html.text, "lxml")
     # print(soup.select("ul.songlist__list li", limit=2))
     lists = soup.select("ul.songlist__list li")
     ret = []
